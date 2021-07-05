@@ -23,7 +23,6 @@ psaux = f'STDOUT: {stdout.read().decode("utf8")}'
 
 # server
 cred = {'3'}
-psaux = {'2'}
 
 
 class SerVer(Resource):
@@ -33,7 +32,7 @@ class SerVer(Resource):
         return {'data': 'nema'}, 201
 
     def get(self):
-        return {'data': 'ima'}, 203
+        return {'data': psaux}, 203
 
 
 api.add_resource(SerVer, '/test', '/request', '/psaux')
