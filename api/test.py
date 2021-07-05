@@ -1,12 +1,7 @@
 import requests
 
-# BASE = 'http://127.0.0.1:5000'
-
-
-# BASE_URL='http://127.0.0.8000' <<< Url with port malformed
 BASE_URL = 'http://127.0.0.1:5000'
-ENDPOINT = 'alo'
-
+ENDPOINT = 'test'
 
 def get_resource():
     # resp=requests.get(BASE_URL+ENDPOINT)  <<< Request url malformed
