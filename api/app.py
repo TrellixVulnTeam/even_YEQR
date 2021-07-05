@@ -22,14 +22,14 @@ stdin, stdout, stderr = client.exec_command('ps aux')
 psaux = f'STDOUT: {stdout.read().decode("utf8")}'
 
 # server
-cred = {'3'}
+cred = {}
 
 
 class SerVer(Resource):
-    def post(self):
-        # args = cred_put_args.parse_args()
-        # cred = args
-        return {'data': 'nema'}, 201
+    def put(self):
+        args = cred_put_args.parse_args()
+        cred = args
+        return cred, 201
 
     def get(self):
         return {'data': psaux}, 203
