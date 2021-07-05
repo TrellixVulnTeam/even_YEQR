@@ -2,7 +2,6 @@ from flask import Flask
 from flask_restful import Resource, Api, reqparse
 from paramiko import SSHClient, AutoAddPolicy
 
-
 app = Flask(__name__)
 api = Api(app)
 
@@ -20,22 +19,22 @@ client.connect(hostname='127.0.0.1', username='ydrea', password='lorien')
 stdin, stdout, stderr = client.exec_command('ps aux')
 psaux = f'STDOUT: {stdout.read().decode("utf8")}'
 
-cred = {}
-payload = {}
+# server
+cred = {'3'}
+psaux = {'2'}
 
 
 class SerVer(Resource):
-    def put(self):
-        args = cred_put_args.parse_args()
-        cred = args
-        return cred, 201
+    def post(self):
+        # args = cred_put_args.parse_args()
+        # cred = args
+        return {'data': 'nema'}, 201
 
     def get(self):
-        return {'data': 'psaux'}
+        return {'data': 'ima'}, 203
 
 
-api.add_resource(SerVer, '/request', '/data')
-
+api.add_resource(SerVer, '/test', '/request', '/psaux')
 
 if __name__ == '__main__':
     app.run(debug=True)
