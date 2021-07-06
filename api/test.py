@@ -7,7 +7,7 @@ client.load_system_host_keys()
 client.connect(hostname= '127.0.0.1', username= 'ydrea', password= 'lorien')
 stdin, stdout, stderr = client.exec_command('ps aux')
 global psaux
-psaux = f"STDOUT: {stdout.read().decode('utf8')}"
+psaux = f"{stdout.read().decode('utf8')}"
 # print (psaux)
 
 
