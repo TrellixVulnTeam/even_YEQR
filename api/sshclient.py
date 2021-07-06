@@ -1,4 +1,22 @@
+
 '''
+
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///baza.db'
+# db = SQLAlchemy(app)
+
+# class PsAuxModel(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)    
+#     ip = db.Column(db.Integer, nullable=False)    
+#     uname = db.Column(db.String(120), nullable=False)    
+#     pwd = db.Column(db.String(120), nullable=False)    
+#     pid = db.Column(db.Integer, nullable=False)    
+#     command = db.Column(db.String(120), nullable=False)    
+#     cpu = db.Column(db.Integer, nullable=False) 
+    
+#     def __repr__(self):
+#         return f"Baza(ipA={ip}, unameA={uname}, pwd={pwd}, pidA={pid}, commandA={commmand}, cpuA={cpu} )"
+
+# db.create_all()
 
 from paramiko import SSHClient, AutoAddPolicy
 from rich import print, pretty, inspect
