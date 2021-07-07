@@ -1,0 +1,2 @@
+
+ps -eo pid,pcpu,comm
