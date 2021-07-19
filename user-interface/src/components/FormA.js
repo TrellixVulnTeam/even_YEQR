@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Form, Input, Button } from "semantic-ui-react";
-import { TabelA } from "./TabelA";
+import { Form, Input, Button } from "reactstrap";
+import Test from "./Test";
 
 export const FormA = () => {
   const [ip, ipSet] = useState("");
@@ -19,12 +19,12 @@ export const FormA = () => {
       console.log(xxx);
       let x4 = xxx[0];
       console.log(x4);
-      let x5 = x4.trim()
+      let x5 = x4.trim();
       console.log(x5);
       let x6 = Array.from(x5.split("\n"));
       console.log(x6);
       psauxSet(x6);
-      console.log(psaux);
+      console.table(psaux);
       loadingSet(false);
     });
   }, []);
@@ -90,9 +90,9 @@ export const FormA = () => {
           </Button>
         </Form.Field>
       </Form>
-      {/* <Tab psaux={psaux} /> */}
+      <Test psaux={psaux} />
       {/* <button onClick={() => handleSaveToPC()}>download</button> */}
-      <TabelA psaux={psaux} load={load} />
+      {/* <TabelA psaux={psaux} load={load} /> */}
       {/* <Bel data={data} /> */}
     </>
   );

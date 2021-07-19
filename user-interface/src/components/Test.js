@@ -1,8 +1,8 @@
-export const STUPCI = [
-  { Header: "PID", accessor: "PID" },
-  { Header: "%CPU", accessor: "%CPU" },
-  { Header: "COMMAND", accessor: "COMMAND" },
-];
+// export const STUPCI = [
+//   { Header: "PID", accessor: "PID" },
+//   { Header: "%CPU", accessor: "%CPU" },
+//   { Header: "COMMAND", accessor: "COMMAND" },
+// ];
 
 
 import React, { Fragment } from "react";

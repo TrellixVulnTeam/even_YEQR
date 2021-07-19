@@ -3,7 +3,7 @@ from flask import Response
 from flask import Flask, json
 from flask_restful import Resource, Api, reqparse
 from flask_cors import CORS, cross_origin
-from flask_sqlalchemy import SQLAlchemy
+# from flask_sqlalchemy import SQLAlchemy
 from test import psaux
 
 app = Flask(__name__)
